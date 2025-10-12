@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+void main()
+{
+	char ch='A';
+	clrscr();
+	do
+	{
+		cout<<ch<<"   ";
+		ch++;
+	} while (ch<='Z');
+	getch();
+}
