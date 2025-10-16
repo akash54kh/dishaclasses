@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	float Principal, Amount, Rate, CompoundInterest;
+	int Time, Year;
+
+	clrscr();
+	cout<<"Enter pricipal amount, rate of interest and time: ";
+	cin>>Principal>>Rate>>Time;
+
+	Amount = Principal;
+	Year = 1;
+	do
+	{
+		Amount = Amount * (1+ Rate/100);
+		Year++;
+	} while (Year <= Time);
+
+	CompoundInterest = Amount - Principal;
+	cout<<"Interest Earned = "<<CompoundInterest;
+
+	getch();
+}
