@@ -1,0 +1,65 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	int num[10], s, digit, i, j=1, ct=0, sum=0, sum2=0, isprime, d;
+	int sum4=0;
+	clrscr();
+
+	cout<<"Enter 10-digit Mobile No: "; //Ex. 9 8 7 6 5 4 3 2 1 0
+	for (i=0; i<10; i++)
+	{
+		cin>>num[i];
+		sum = sum + num[i];
+	}
+
+	while (j<=sum)
+	{
+		if (sum%j==0)
+		{
+			ct += 1;
+		}
+		j += 1;
+	}
+
+	if (ct==2)
+	{
+		isprime = 1;
+	}
+
+	d = sum + sum;
+
+	cout<<"Sum = "<<sum<<endl;
+
+	cout<<"Double = "<<d<<endl;
+
+	s = sum;
+
+	while (sum > 0)
+	{
+		digit = sum % 10;
+		sum = sum / 10;
+		sum2 = sum2 + digit;
+	}
+
+	cout<<"Overall = "<<sum2<<endl;
+
+	if (isprime == 1)
+	{
+		cout<<s<<" is Prime"<<endl;
+	}
+	else
+	{
+		cout<<s<<" is not Prime"<<endl;
+	}
+
+	for(i=10; i>6; i--)
+	{
+		sum4 = sum4 + num[i-1];
+	}
+
+	cout<<"Last Pin Form = "<<sum4<<endl;
+	cout<<"Sixth Place = "<<num[5]<<endl;
+	cout<<"Tooth = "<<num[1]<<endl;
+	getch();
+}
